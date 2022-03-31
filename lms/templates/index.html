@@ -1,0 +1,207 @@
+<%page expression_filter="h"/>
+<%inherit file="main.html" />
+<%namespace name='static' file='static_content.html'/>
+<%!
+from django.utils.translation import ugettext as _
+from django.urls import reverse
+
+from openedx.core.djangolib.markup import HTML, Text
+%>
+
+<style>
+.hero{
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 500px;
+}
+
+
+.heading-group h1{
+   color: #fff !important;
+}
+
+.heading-group p{
+  color: #f3f3f3 !important;
+} 
+
+
+.Slider {
+  color: white;
+  font-family: arial, san-serif;
+  width: 100%;
+  height: inherit;
+  position: relative;
+  background-color: #111542;
+}
+
+.Slider::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  background-image: url('./static/edx-custom-theme/images/header-bg.svg');
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  /* background: rgba(91,0,166,0.4); */
+
+}
+
+.Slider .Slider-content {
+  font-size: 48px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+}
+.Slider .Slider-slide {
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: opacity 1s ease-in-out;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+}
+
+.outer-wrapper{
+  z-index: 33 !important;
+}
+
+.Slider .Slider-slide.show {
+  opacity: 1;
+}
+
+.search-input{
+  min-width: 320px !important;
+  min-height: 50px !important;
+}
+
+.search-button{
+  height: 50px;
+  border: none !important;
+  background-image: none !important;
+  background: #e9aa33;
+}
+.heading-group h1{
+  font-weight: bold;
+}
+
+#main {
+    margin-top: -100px;
+    padding: 2rem;
+    z-index: 99;
+    position: relative;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 32px 64px rgba(0, 0, 0, 0.24);
+}
+
+
+@media(max-width: 996px){
+ .hero{
+     margin-top: 0px !important;
+  }
+} 
+
+@media(max-width: 410px){
+ .search-input{
+   width: 100% !important;
+   min-width: 100% !important;
+ }
+}
+</style>
+
+<%block name="hero">
+     <header class="hero Slider container-fluid">
+        <div class="outer-wrapper">
+          <div class="title">
+            <div class="heading-group">
+              % if homepage_overlay_html:
+                ${homepage_overlay_html | n, decode.utf8}
+              % else:
+                <%include file="index_overlay.html" />
+              % endif
+            </div>
+
+          </div>
+
+          <%include file="index_promo_video.html" />
+        </div>
+        <!-- 
+	<div class="Slider-slide show" style="background-image: url('https://magmaindia.org/img/head.jpg');"></div>
+    	<div class="Slider-slide" style="background-image: url('https://magmaindia.org/img/head2.jpg');"></div>
+    	<div class="Slider-slide" style="background-image: url('https://magmaindia.org/img/head3.jpg');"></div> -->
+      </header>
+</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="home">
+     	 <%include file="${courses_list}" />
+
+    </section>
+</main>
+
+% if show_homepage_promo_video:
+  <section id="video-modal" class="modal home-page-video-modal video-modal">
+    <div class="inner-wrapper">
+      <iframe title="YouTube Video" width="640" height="360" src="//www.youtube.com/embed/${homepage_promo_video_youtube_id}?showinfo=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+% endif
+
+<%block name="js_extra">
+   <script type="text/javascript">
+      $(window).load(function() {
+         if(getParameterByName('next')) {
+              $('#login').trigger("click");
+         }
+      })
+   </script>
+
+   <script>
+	function cycleBackgrounds() {
+    var index = 0;
+ 
+    $imageEls = $('.Slider .Slider-slide'); // Get the images to be cycled.
+ 
+    setInterval(function () {
+        // Get the next index.  If at end, restart to the beginning.
+        index = index + 1 < $imageEls.length ? index + 1 : 0;
+        
+        // Show the next
+        $imageEls.eq(index).addClass('show');
+        
+        // Hide the previous
+        $imageEls.eq(index - 1).removeClass('show');
+      }, 3000);
+    };
+ 
+    // Document Ready.
+   $(function () {
+       cycleBackgrounds();
+   });
+   </script>
+</%block>
+
+% if show_signup_immediately is not UNDEFINED:
+  ## NOTE: This won't work in production, because anonymous views are cached, so it will
+  ## show either with or without this extra js for 3 minutes at a time.
+<script type="text/javascript">
+  $(window).load(function() {$('#signup_action').trigger("click");});
+</script>
+% endif

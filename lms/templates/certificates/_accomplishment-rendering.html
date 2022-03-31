@@ -1,0 +1,389 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%namespace name='static' file='../static_content.html'/>
+<%
+course_mode_class = course_mode if course_mode else ''
+%>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Untitled Page</title>
+<style type="text/css">
+div#container
+{
+   width: 1238px;
+   position: relative;
+   margin: 0 auto 0 auto;
+   text-align: left;
+}
+body
+{
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   text-align: center;
+}
+a
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+a:visited
+{
+   color: #800080;
+}
+a:active
+{
+   color: #FF0000;
+}
+a:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+input:focus, textarea:focus, select:focus
+{
+   outline: none;
+}
+#cert_Image5
+{
+   vertical-align: top;
+}
+#Image5
+{
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#cert_Text1 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#cert_Text1 div
+{
+   text-align: center;
+}
+#cert_Image1
+{
+   vertical-align: top;
+}
+#Image1
+{
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#cert_Image2
+{
+   vertical-align: top;
+}
+#Image2
+{
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#cert_Edit_name 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#cert_Edit_name
+{
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 35px;
+}
+#cert_Edit_name div
+{
+   text-align: center;
+}
+#cert_Text2 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#cert_Text2 div
+{
+   text-align: left;
+}
+#cert_Edit_dept 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#cert_Edit_dept
+{
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 17px;
+}
+#cert_Edit_dept div
+{
+   text-align: center;
+}
+#cert_Edit_univ 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#cert_Edit_univ
+{
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 17px;
+}
+#cert_Edit_univ div
+{
+   text-align: center;
+}
+#cert_Edit_coursename 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#cert_Edit_coursename
+{
+   color: #32CD32;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 27px;
+}
+#cert_Edit_coursename div
+{
+   text-align: center;
+}
+#cert_Text5 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#cert_Text5 div
+{
+   text-align: left;
+}
+#cert_Text6 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#cert_Text6 div
+{
+   text-align: left;
+}
+#cert_Text7 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#cert_Text7 div
+{
+   text-align: left;
+}
+#cert_Image3
+{
+   vertical-align: top;
+}
+#Image3
+{
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#cert_Image4
+{
+   vertical-align: top;
+}
+#Image4
+{
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#cert_Edit_date 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#cert_Edit_date div
+{
+   text-align: left;
+}
+#cert_Edit_courseidnumber 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#cert_Edit_courseidnumber div
+{
+   text-align: left;
+}
+</style>
+<script src="cookie.notice.js"></script>
+</head>
+<body>
+
+
+<div id="container">
+<div id="cert_Image5" style="position:absolute;left:39px;top:1px;width:1175px;height:722px;z-index:0;">
+<img src="${static.url('certificates/images/bordercert.png')}" id="Image5" alt=""></div>
+<div id="cert_Text1" style="position:absolute;left:241px;top:84px;width:746px;height:171px;text-align:center;z-index:1;">
+<span style="color:#000000;font-family:Arial;font-size:24px;line-height:32px;"><strong>Teaching Learning Centre, Ramanujan College<br></strong></span><span style="color:#000000;font-family:Arial;font-size:24px;line-height:27px;"><strong>University of Delhi<br></strong></span><span style="color:#000000;font-family:Arial;font-size:17px;line-height:27px;"><strong>under the aegis of</strong><br><strong>MINISTRY OF EDUCATION<br></strong></span><span style="color:#000000;font-family:Arial;font-size:17px;line-height:19px;"><strong>PANDIT MADAN MOHAN MALAVIYA NATIONAL MISSION ON TEACHERS AND TEACHING<br><br></strong>This is to certify that</span></div>
+<div id="cert_Image1" style="position:absolute;left:1004px;top:71px;width:169px;height:152px;z-index:2;">
+<img src="${static.url('certificates/images/two.png')}" id="Image1" alt=""></div>
+<div id="cert_Image2" style="position:absolute;left:78px;top:74px;width:147px;height:144px;z-index:3;">
+<img src="${static.url('certificates/images/one.png')}" >
+<div id="cert_Edit_name" style="position:absolute;left:100px;top:210px;width:878px;height:39px;text-align:center;z-index:4;">
+<span style="color:#000000;">${accomplishment_copy_name}</span></div>
+<div id="cert_Text2" style="position:absolute;left:530px;top:270px;width:27px;height:18px;z-index:5;">
+<span style="color:#000000;font-family:Arial;font-size:16px;">of</span></div>
+
+<div id="cert_Edit_dept" style="position:absolute;left:102px;top:312px;width:878px;height:19px;text-align:center;z-index:6;">
+<span style="color:#000000;">${request.user.profile.college_extra_dep_o}
+%if request.user.profile.college_extra_dep == 'Other':
+
+%else:
+${request.user.profile.college_extra_dep}
+%endif
+
+
+</span></div>
+<div id="cert_Edit_univ" style="position:absolute;left:100px;top:342px;width:887px;height:19px;text-align:center;z-index:7;">
+<span style="color:#000000;">${request.user.profile.college_extra_uni_o}
+
+%if request.user.profile.college_extra_uni == 'Other':
+
+%else:
+${request.user.profile.college_extra_uni}
+%endif
+
+
+</span></div>
+
+
+
+
+<div id="cert_Edit_coursename" style="position:absolute;left:101px;top:411px;width:897px;height:30px;text-align:center;z-index:8;"> 
+
+<span style="color:#32CD32;"><strong>${accomplishment_copy_course_name}</strong></span></div> 
+
+  
+
+<div id="cert_duration" style="position:absolute;left:101px;top:487px;width:897px;height:30px;text-align:center;z-index:8;"> 
+
+<span style="color:#000000;"><i>Course Duration ${start_end.start_date.strftime('%d/%B/%Y')} - ${start_end.end_date.strftime('%d/%B/%Y')} </i></span></div> 
+
+  
+
+<div id="grade_final" style="position:absolute;left:101px;top:457px;width:897px;height:30px;text-align:center;z-index:8;"> 
+
+<span style="color:#000000;"><strong>${grade_final}</strong></span> 
+
+</div> 
+
+
+
+<div id="Qrcode" style="position:absolute;left:938px;top:250px;">
+<img width="150px" height="150px" src='${qr_image_url}'/>
+
+
+</div>
+
+
+
+
+
+
+
+<div id="cert_Text5" style="position:absolute;left:478px;top:380px;width:163px;height:15px;z-index:9;">
+<span style="color:#000000;font-family:Arial;font-size:13px;">Successfully Completed</span></div>
+<div id="cert_Text6" style="position:absolute;left:0px;top:-30px;width:73px;height:15px;z-index:10;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Issued On:</strong></span></div>
+<div id="cert_Text7" style="position:absolute;left:376px;top:525px;width:144px;height:15px;z-index:11;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Certificate ID Number:</strong></span></div>
+<div id="cert_Image3" style="position:absolute;left:9px;top:491px;width:145px;height:104px;z-index:12;">
+<img src="${static.url('certificates/images/sign1.png')}" id="Image3" alt=""></div>
+<div id="cert_Image4" style="position:absolute;left:938px;top:487px;width:151px;height:108px;z-index:13;">
+
+<img src="${static.url('certificates/images/sign2.png')}" id="Image4" alt=""></div>
+<div id="cert_Edit_date" style="position:absolute;left:72px;top:-30px;width:236px;height:15px;z-index:14;">
+<span style="color:#000000;font-family:Arial;font-size:13px;">${certificate_date_issued}</span></div>
+<div id="cert_Edit_courseidnumber" style="position:absolute;left:520px;top:525px;width:318px;height:15px;z-index:15;">
+<span style="color:#000000;font-family:Arial;font-size:13px;">${certificate_id_number}</span></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,632 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("FAQ")}</%block>
+
+
+
+<div class="container-fluid courses-header">
+    <div class="courses-content text-center">
+        <h1 class="mb-4 fw-bold text-white">FREQUENTLY ASKED QUESTIONS</h1>
+        <h5 class="mb-2 text-light">We encourage you to kindly sift through the following FAQs below for general
+            information and commonly raised problems/doubts.</h5>
+    </div>
+</div>
+<!-- partial:index.partial.html -->
+<main class="site-wrapper container mt-5">
+    <ul class="h6 mb-3 list-group list-group-flush list-group-numbered">
+        <li class="list-group-item text-primary"><a href="#Registration" class="text-decoration-none"> Registration
+                and Enrollment </a></li>
+        <li class="list-group-item text-primary"> <a href="#Programme" class="text-decoration-none">Programme
+                Schedule and Course Content </a></li>
+        <li class="list-group-item text-primary"> <a href="#Assignment" class="text-decoration-none">Assignment
+                Submission and Progress Report</a></li>
+        <li class="list-group-item text-primary"> <a href="#Feedback" class="text-decoration-none">Feedback and
+                Certification</a></li>
+    </ul>
+
+    <p class="h4 mb-2 fw-bold" id="Registration">
+        Registration and Enrollment
+    </p>
+
+    <div class="accordion mb-5" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <strong> I have registered and made the payment for the Programme . How do I start
+                        accessing the contents of the programme?</strong>
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <h6> After successful registration and payment for the Short Term Courses, follow the steps
+                        mentioned below to access the contents of the programme: </h6>
+                    <ul class="h6 mt-2">
+                        <li class="m-2">Click on <a href="http://stc.rcmoocs.in/">http://stc.rcmoocs.in/</a> to
+                            enroll in the course.</li>
+                        <li class="m-2">Click on the “Register.” The option is available on the top right corner of
+                            the
+                            website.
+                            <div class="mt-1">
+                                After clicking on Register, a window pane will appear. Fill in all your credentials
+                                (email address, name, password and username) carefully. Please note down
+                                them or save them for future reference. In the email address section, write the
+                                same email id as provided in google form used for registration and the one that
+                                you access routinely. Make sure all the spellings are correct.
+                            </div>
+                        </li>
+                        <li class="m-2">Once you register, you will receive an email from us at your registered
+                            email
+                            address. Kindly click on the activation link provided in the mail. Please check
+                            your spam mail, if you do not find the <strong> activation link </strong> in your inbox.
+                        </li>
+                        <li class="m-2">After this, go back to <a href="http://stc.rcmoocs.in/">
+                                http://stc.rcmoocs.in/</a> and click on <strong> Sign In</strong>. Fill in your
+                            username and password. You will be able to log in into your course portal.</li>
+                        <li class="m-2">
+                            After logging in, you will see the option of <strong> Explore Courses </strong>. Click
+                            on that and
+                            you will be directed to the link for our STC.
+                        </li>
+                        <li class="m-2">
+                            Click on <strong>Enroll Now</strong>.
+                        </li>
+                        <div class="mt-3 ps-3">
+                            You can now access the course contents.
+
+                            <p class="h6 fw-bold mt-2">KINDLY DO NOT USE REDIFFMAIL’S EMAIL - ID TO REGISTER
+                                YOURSELF.</p>
+                            <p class="mt-2">
+                                If there is any problem during registration, please write a mail to <a
+                                    href="mailto:stc@ramanujan.du.ac.in">
+                                    stc@ramanujan.du.ac.in</a> furnishing the following details:
+                            </p>
+                            <p>
+                                Name, Registered Email Address (filled in Form mentioned in brochure), Screenshot of
+                                the error encountered while registering and a brief description of
+                                the problem.
+                            </p>
+
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <strong> I have not received the activation link for the completion of the registration
+                        process. What should I do?</strong>
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <h6> If you have entered the correct email id, then please wait for sometime. Alternatively,
+                        check your Spam folder.</h6>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <strong>How do I access the course contents during the period of the programme?</strong>
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <h6>Once you have enrolled for the course, then you can access the course contents at
+                        any time by visiting <a href="http://stc.rcmoocs.in/">http://stc.rcmoocs.in/</a> and
+                        clicking on <strong> Sign In.</strong> Once you sign
+                        in, you will be directed to your course portal.</h6>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <strong>I have successfully registered but I am unable to sign. The page gives the
+                        error: Wrong email or password used. What should I do?</strong>
+                </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <h6 class="lh-base">If you are unable to sign in, the primary reason is that you are using
+                        either wrong
+                        email id or password. Kindly make sure you use the same email id and password
+                        throughout the programme. If you have forgotten your password,, then please DO
+                        NOT make more than <strong> 3 attempts </strong>. Otherwise your account will be locked.
+                        Also, please <strong> DO NOT </strong> try enrolling again by registering with a different
+                        email address
+                        as the enrollments would have been closed and we will not be accountable for
+                        any loss of your course progress.</h6>
+
+                    <p class="lh-base h6">
+                        If the problem still persists, please write a mail to <a
+                            href="mailto:stc@ramanujan.du.ac.in">stc@ramanujan.du.ac.in</a>
+                        furnishing the following details:
+                    </p>
+                    <p class="lh h6">
+                        Name, Registered Email Address, Screenshot of the error encountered while signing
+                        in and a brief description of the problem.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    <strong>My account is locked. What should I do?</strong>
+                </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <h6 class="lh-base">You must have tried to log in multiple times with the wrong password. Hence,
+                        your account has been blocked. Please wait for 4- 5 hours and then try again.</h6>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    <strong>After signing in, I see a message that I have not enrolled for any course. What should I
+                        do?</strong>
+                </button>
+            </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <h6 class="lh-base">If you have already signed in and the above message appears, then you have
+                        not
+                        clicked on “Enroll Course”. Please make sure you click on <strong>“Enroll Course”</strong>;
+                        otherwise you won’t be able to see our course contents.</h6>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p class="h4 mb-2 fw-bold" id="Programme">
+        Programme Schedule and Course Content
+    </p>
+
+    <div class="accordion mb-5" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSeven">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                    <strong> What is the Programme Schedule of the Course?</strong>
+                </button>
+            </h2>
+            <div id="collapseSeven" class="accordion-collapse collapse show" aria-labelledby="headingSeven"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <h6> You will be updated about the schedule of the Programme through the official
+                        Telegram group of the Programme. No individual mails will be sent in this
+                        regard. </h6>
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseE" aria-expanded="false" aria-controls="collapseE">
+                    <strong>In which platform will the course be conducted?</strong>
+                </button>
+            </h2>
+            <div id="collapseE" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <h6>The course can be accessed at <a href="http://stc.rcmoocs.in/">http://stc.rcmoocs.in/</a>.
+                        Use the steps mentioned in Question 1 to register and enroll yourself in the
+                        course.</h6>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsenine" aria-expanded="false" aria-controls="collapsenine">
+                    <strong>What is the nature of the Programme?</strong>
+                </button>
+            </h2>
+            <div id="collapsenine" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <h6 class="lh-base">
+                       The short term course is a self paced course with few live sessions(if any) . You can watch the recorded training modules at your convenience within the given time frame of the course. Since it is an online course, you will have to invest a minimum of one - two hours everyday to complete the requirements of that day.
+
+
+                    <h6 class="lh-base">The inaugural Session will be LIVE.</h6>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseten" aria-expanded="false" aria-controls="collapseten">
+                    <strong>When will the course content for each day be made available?</strong>
+                </button>
+            </h2>
+            <div id="collapseten" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <h6 class="lh-base">The course content would be uploaded each day by 9.00 am.</h6>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseele" aria-expanded="false" aria-controls="collapseele">
+                    <strong>Will there be any live sessions?</strong>
+                </button>
+            </h2>
+            <div id="collapseele" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <h6 class="lh-base">Participants will be given prior information about the live sessions (if
+                        any)
+                        through the official Telegram Group of the Course.</h6>
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsetwe" aria-expanded="false" aria-controls="collapsetwe">
+                    <strong>Can the course contents be accessed through mobile?</strong>
+                </button>
+            </h2>
+            <div id="collapsetwe" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <h6 class="lh-base">The course can be readily accessed through mobile. However, it would be
+                        preferable that the participants use a laptop to attend the course for availing a
+                        fruitful hands-on experience. Some tools covered through the course might not
+                        be accessible on mobile; though for the same, alternatives would be suggested.</h6>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsethir" aria-expanded="false" /aria-controls="collapsethir">
+                    <strong>I have poor network connectivity and unable to submit assignments in a
+                        timely fashion?</strong>
+                </button>
+            </h2>
+            <div id="collapsethir" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <h6 class="lh-base">Considering the current pandemic situation, we may relax for a day or two.
+                        But
+                        kindly try to make submissions within deadlines.</h6>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsefort" aria-expanded="false" aria-controls="collapsefort">
+                    <strong>How do I resolve my doubts related to course content?</strong>
+                </button>
+            </h2>
+            <div id="collapsefort" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <h6 class="lh-base">There will be a <strong>discussion forum,</strong> where you can post your
+                        queries that would
+                        be taken by our resource persons or by some fellow Participants. Although we
+                        encourage Fellow Participants to help each other this will enhance each other's
+                        learning.</h6>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p class="h4 mb-2 fw-bold" id="Assignment">
+        Assignment Submission and Progress Report
+    </p>
+
+    <div class="accordion mb-5" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSeven">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsefifteen" aria-expanded="true" aria-controls="collapsefifteen">
+                    <strong> How do I have to submit the assignments?</strong>
+                </button>
+            </h2>
+            <div id="collapsefifteen" class="accordion-collapse collapse show" aria-labelledby="headingSeven"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <h6> The assignments will be accepted through the course portal link ONLY. No other
+                        mode of submission will be accepted. </h6>
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsesixteen" aria-expanded="false" aria-controls="collapsesixteen">
+                    <strong>What is the deadline for submission of assignments/quizzes? </strong>
+                </button>
+            </h2>
+            <div id="collapsesixteen" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <h6>The deadline for the quizzes is <strong> 2 days - 3 days  i.e.,</strong> if the quiz has been
+                        assigned on
+                        20th, you have to submit it by 21<sup>st</sup> -22<sup>nd</sup> night 11 p.m.</h6>
+                    <h6 class="lh-base">Similarly, the deadline for the assignments is <strong> 2 days - 3 days
+                            i.e.,</strong> if the assignment has
+                        been posted on 20th, you have to submit it by 21<sup>st</sup> -22<sup>nd</sup>  night 11 p.m. There may be
+                        some assignments for which the deadline would be specifically given. In such
+                        cases, the given deadline would be treated as final. The participants must ensure
+                        that they submit the assignments within the deadline. No late submissions would
+                        be entertained.</h6>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseseventeen" aria-expanded="false" aria-controls="collapseseventeen">
+                    <strong>How do I track my progress during the programme?</strong>
+                </button>
+            </h2>
+            <div id="collapseseventeen" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <h6 class="lh-base">TThe course portal has a <strong> Progress tab.</strong> You will be able to
+                        see quiz scores so that
+                        you can keep a track of your submissions.</h6>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseeighteen" aria-expanded="false" aria-controls="collapseeighteen">
+                    <strong>How do I submit the assignments?</strong>
+                </button>
+            </h2>
+            <div id="collapseeighteen" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <h6 class="lh-base">To submit the assignments, you need to strictly follow the instructions
+                        given in
+                        the assignment. No other mode of submission would be accepted. The
+                        assignments are submitted in the course portal itself by uploading a document
+                        created as per the following specifications:</h6>
+                    <h6 class="lh-base">The file has to be saved with the name (first four letters of the first name
+                        + last
+                        four digits of mobile number +@<assignment no as mentioned in the instructions> ). For
+                            example, if the name is Sahil Pathak and mobile number is
+                            9013778737 and the assignment number mentioned is 6, then the <strong> file name
+                                should be sahi8737@6.</strong></h6>
+                    <h6 class="lh-base">Then, upload your document using the button provided (Upload your
+                        assignment)
+                        under the section <strong>Staff Graded Assignment.</strong></h6>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseninteen" aria-expanded="false" aria-controls="collapseninteen">
+                    <strong>I uploaded an incorrect assignment or the name of the file was incorrect;
+                        can I upload it again?</strong>
+                </button>
+            </h2>
+            <div id="collapseninteen" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <h6 class="lh-base">The assignment once uploaded cannot be changed once you click the submit
+                        button. Kindly make any required changes in the file to be uploaded using
+                        “Upload another file” before you click on Submit. Please make sure you upload
+                        the right document with the right name</h6>
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsetwetee" aria-expanded="false" aria-controls="collapsetwetee">
+                    <strong>The submit button of the assignment is disabled, what is the problem?</strong>
+                </button>
+            </h2>
+            <div id="collapsetwetee" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <h6 class="lh-base">The submit button will be disabled once the assignment’s due date is over.
+                        We
+                        will not be accepting any assignments post deadline.</h6>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsetwetityonw" aria-expanded="false" aria-controls="collapsetwetityonw">
+                    <strong>While uploading my assignment, I get an error message, “The file you are
+                        trying to upload is too large”. How do I submit my assignment?</strong>
+                </button>
+            </h2>
+            <div id="collapsetwetityonw" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <h6 class="lh-base">In such a case, kindly upload your video/screenshots/images/recordings
+                        (whichever applicable) in your Google Drive and copy its link in the word
+                        document to be uploaded.</h6>
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsetwetwo" aria-expanded="false" aria-controls="collapsetwetwo">
+                    <strong>How do I submit the Quizzes?</strong>
+                </button>
+            </h2>
+            <div id="collapsetwetwo" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <h6 class="lh-base">The quiz has to be submitted using the submit button at the bottom</h6>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsetwothree" aria-expanded="false" aria-controls="collapsetwothree">
+                    <strong>The submit button of the quiz is disabled. What is the problem?</strong>
+                </button>
+            </h2>
+            <div id="collapsetwothree" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <h6 class="lh-base">The submit button will be disabled once the due date of the quiz is over. We
+                        will
+                        not be accepting any quizzes post deadline. If the deadline is not yet over, then
+                        please make sure you have marked answers for all the questions; then only the
+                        submit button would be enabled.</h6>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p class="h4 mb-2 fw-bold" id="Feedback">
+        Feedback and Certification
+    </p>
+    <div class="accordion mb-5" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSeven">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsetwefour" aria-expanded="true" aria-controls="collapsetwefour">
+                    <strong> Is it necessary to give the feedback each day?</strong>
+                </button>
+            </h2>
+            <div id="collapsetwefour" class="accordion-collapse collapse show" aria-labelledby="headingSeven"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <h6> It is mandatory to fill in the feedback form for each session as per the guidelines
+                        of Ministry of Education. <strong>Kindly ensure you submit your feedback on a daily
+                            basis.</strong></h6>
+                    <h6> It would also give us an essential understanding of the way the programme and
+                        the contents are being perceived. </h6>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsetwetfive" aria-expanded="false" aria-controls="collapsetwetfive">
+                    <strong>What is the eligibility criteria for the certificate for the programme?</strong>
+                </button>
+            </h2>
+            <div id="collapsetwetfive" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <h6> <strong> Ans.</strong> 
+                       The committee has decided on the following criteria for issuing certificates to the participants:
+                        </h6>
+                    
+                    <ul class="h6 mt-2">
+                        <li class="m-2">The participants must submit all quizzes during the course of the
+                            programme within deadline.</li>
+                        <li class="m-2">The participants must submit all the assignments within the deadline
+                            provided.
+                        </li>
+                        <li class="m-2">The participants need to submit at least <strong> 90% assignments </strong> out of the
+                            total number.
+                        </li>
+                        <li class="m-2"Participants need to score a minimum of 50 percent in aggregate for the
+                        award of Certificate of Participation.</li>
+                        <li class="m-2">
+                            Registration Fees Paid
+                        </li>
+                        <div class="mt-3 ps-3">
+                            The decision of the committee would be final in this regard.
+
+                            <p class="h6 fw-bold mt-2">KINDLY DO NOT USE REDIFFMAIL’S EMAIL - ID TO REGISTER
+                                YOURSELF.</p>
+                            <p class="mt-2">
+                                For any further information or doubts, please feel free to write at: <a
+                                    href="mailto:stc@ramanujan.du.ac.in">
+                                   stc@ramanujan.du.ac.in</a> 
+                            </p>
+                            
+
+                        </div>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSeven">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsetwefour" aria-expanded="true" aria-controls="collapsetwefour">
+                    <strong> When will I get my certificate?</strong>
+                </button>
+            </h2>
+            <div id="collapsetwefour" class="accordion-collapse collapse collapse" aria-labelledby="headingSeven"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+	    <h6> Once you meet the <strong><b>eligibility criteria</b></strong> for the certificate for the programme
+                    <h6> Go to the progress bar tab and click request for the certificate button</h6>
+                    <h6> Click view Certificate button and download the certificate</h6>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <!-- 	END Accordion -->
+</main>

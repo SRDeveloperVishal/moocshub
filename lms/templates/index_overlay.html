@@ -1,0 +1,36 @@
+<%page expression_filter="h"/>
+
+<%!
+from django.utils.translation import ugettext as _
+from openedx.core.djangolib.markup import HTML, Text
+%>
+
+<style>
+  .heading-group .hero-heading{
+    font-size: 5.5rem;
+    line-height: 1.125;
+    font-weight: 800;
+  }
+  .heading-group .hero-heading span{
+    background-image: linear-gradient(45deg, #685ef0, #948eee);
+     -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  }
+
+  .heading-group .hero-heading + p {
+    font-size: 1.25rem;
+    color: rgb(102, 102, 102);
+  }
+
+
+  @media (max-width: 964px){
+     .heading-group .hero-heading{
+       font-size: 3.5rem;
+     } 
+  } 
+</style>
+
+<h1 class="hero-heading">Welcome to <br> <span> Ramanujan College </span></h1>
+<p> Executive Education courses from top universities offer the skills<br> you need to pivot and expand your career. </p>

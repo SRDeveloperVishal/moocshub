@@ -1,0 +1,233 @@
+## mako
+<%page expression_filter="h"/>
+<%!
+  from django.urls import reverse
+  from django.utils.translation import ugettext as _
+  from lms.djangoapps.branding.api import get_footer
+  from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_enabled
+  from lms.djangoapps.branding import api as branding_api
+%>
+<% footer = get_footer(is_secure=is_secure) %>
+<%namespace name='static' file='static_content.html'/>
+
+
+
+
+<!-- <div class="footer-clean border">
+  <footer>
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col"><a href="#" style="color: black;">About</a><a href="#" style="margin-left: 10px;color: black;">Research</a><a href="#" style="margin-left: 10px;color: black;">FAQs</a><a href="#" style="margin-left: 10px;color: black;">Contact Us<br /><br /></a><img
+                      src="${static.url('images/logo.png')}" style="height: 80px;" /></div>
+              <div class="col text-right" style="height: 102px;"><a style="margin-right: 10px;color: black;width: auto;font-size: 13px;">MOOCs</a><a href="#" style="margin-right: 10px;color: black;font-size: 13px;">Team of Service and Policiles</a><a href="#" style="/*margin-right: 10px;*/color: black;font-size: 13px;">Authorization Document</a>
+                  <p><strong>Powered by Vipin Rathi</strong><br /></p><img src="${static.url('images/openedx-logo.png')}" style="margin-right: 10px; height: 80px">
+          </div>
+      </div>
+  </footer>
+</div> -->
+
+<style>
+
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 30px 30px 20px 30px;
+  color: #999;;
+  background-color: #111542;
+}
+
+.footer > * {
+  flex:  1 100%;
+}
+
+.footer__addr {
+  margin-right: 1.25em;
+  margin-bottom: 2em;
+}
+
+.footer__logo {
+  font-weight: 400;
+  text-transform: lowercase;
+  font-size: 1.5rem;
+}
+
+.footer__addr h2 {
+  margin-top: 1.3em;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.nav__title {
+  font-weight: 400;
+  font-size: 18px;
+color:#fff;
+}
+
+.footer address {
+  font-style: normal;
+  color: #999;
+}
+
+.footer__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  max-width: max-content;
+  background-color: rgb(33, 33, 33, 0.07);
+  border-radius: 100px;
+  color: #2f2f2f;
+  line-height: 0;
+  margin: 0.6em 0;
+  font-size: 1rem;
+  padding: 0 1.3em;
+}
+
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer li {
+  line-height: 2em;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer__nav {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.footer__nav > * {
+  flex: 1 50%;
+  margin-right: 1.25em;
+}
+
+.nav__ul a {
+  color: #999;
+}
+
+.link_nav{
+color: #999;
+}
+
+.nav__ul--extra {
+  column-count: 2;
+  column-gap: 1.25em;
+}
+
+.legal {
+padding:20px;
+text-align: center;
+color:  #fff;
+  background-color: #0f1239;
+}
+  
+.legal__links {
+
+}
+
+.heart {
+  color: #2f2f2f;
+}
+
+@media screen and (min-width: 24.375em) {
+  .legal .legal__links {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 40.375em) {
+  .footer__nav > * {
+    flex: 1;
+  }
+  
+  .nav__item--extra {
+    flex-grow: 2;
+  }
+  
+  .footer__addr {
+    flex: 1 0px;
+  }
+  
+  .footer__nav {
+    flex: 2 0px;
+  }
+}
+</style>
+
+
+<footer class="footer mt-5">
+ <div class="container">
+
+  <ul class="footer__nav">
+    <li class-"nav__item">
+      <div class="footer__addr">
+	    <div class="nav__title" >
+            <img src="${branding_api.get_logo_url(is_secure)}" class="img-fluid" style="margin-left: -24px; height: 50px; display: block"> 
+	    Moocshub</div>
+
+
+            <address>
+
+              <a class="btn btn-primary mt-3" href="mailto:info@magmaindia.org">Email Us</a>
+    </address>
+  </div>
+  </li>
+    <li class="nav__item">
+      <h2 class="nav__title">Visit</h2>
+
+      <ul class="nav__ul">
+      
+                <li>
+                  <a href="https://magmaindia.org" style="color:#999" >Home</a>
+                </li>
+                <li>
+                  <a style="color:#999" href="${marketing_link('COURSES')}">Our Courses</a>
+                </li>
+
+      </ul>
+    </li>
+
+    <li class="nav__item ">
+      <h2 class="nav__title">Contact Us</h2>
+
+      <ul class="nav__ul ">
+        <li>
+                  <a style="color:#999" href="mailto:info@magmaindia.org">info@magmaindia.org</a>
+                </li>
+                <li>
+                  <a style="color:#999" >8077121880</a>
+                </li>
+
+
+      </ul>
+    </li>
+
+    <li class="nav__item">
+
+      <ul class="nav__ul">
+      
+ <h4 class="footer-widget-title">Supported by</h4>
+              <ul>
+                 <li>
+                </li>
+                <li><img src="${static.url('images/openedx-logo.png')}" style="width: 200px; margin-left: -10px;" alt=""></li>
+               
+              </ul>
+
+      </ul>
+    </li>
+  </ul>
+ </div>
+</footer>
+
+  <div class="legal">
+
+    <span class="legal__links" >&copy; Copyright Moocshub. All Rights Reserved.</span>
+    
+      <span>Powered by <a href="https://magmaindia.org/" style="color: 5500a6; text-decoratin: none; font-weight: bold;"  >Moocshub</a> </span>
+  </div>

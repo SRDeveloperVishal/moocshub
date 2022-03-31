@@ -1,0 +1,101 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("About")}</%block>
+
+<style>
+    .about .heading h1{
+        margin-bottom: 10px;
+
+    }
+
+    .about ul li{
+        margin: 10px 0;
+    }
+</style>
+
+<div class="container-fluid courses-header">
+    <div class="courses-content text-center">
+        <h1 class="mb-4 fw-bold text-white">ABOUT US</h1>
+        <h5 class="mb-2 text-light">We are Research and Development Cell of Ramanujan College.</h5>
+    </div>
+</div>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about mt-5 mb-5">
+        <div class="heading text-center"> 
+            <h1>Our Team</h1>
+            <p>Team Behind RCMOOCS</p>
+        </div>
+        <div class="row mt-5 mb-5 text-center">
+            <h3>Our Director:</h3>
+            <div class="col-md-6">
+                <ul>
+                    <li>Dr. S.P. Aggrawal </li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul>
+                    <li>Dr. Nikhil Kumar Rajput </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row mt-5 mb-5 text-center">
+            <h3 class="mb-4">Our Assistant Director:</h3>
+            <div class="col-md-12">
+                <ul>
+                    <li>Mr. Vipin Rathi </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        <div class="row mb-5 text-center">
+            <div class="heading mb-4">
+                <h1>Our Support Team</h1>
+            </div>
+            <div class="col-md-4">
+                <ul>
+                    <li>Dr. Ashish Kumar Shukla</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul> 
+                    <li>Mrs. Shipra Yadav</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul>
+                    <li>Dr. Sachin Tomar</li>
+                </ul>
+            </div>
+            
+        </div>
+
+        <div class="row mb-5 text-center">
+            <div class="col-md-3">
+                <ul>
+                    <li>Mr. Rahul Prasad</li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <ul>
+                    <li>Mr. Vishal Bhardwaj</li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <ul>
+                    <li>Mr. Shubham Karala</li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <ul>
+                    <li>Mr. Mohit Aggarwal</li>
+                </ul>
+            </div>
+        </div>
+        
+    </section>
+</main>
